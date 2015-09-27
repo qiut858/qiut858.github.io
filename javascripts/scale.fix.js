@@ -15,3 +15,4 @@ function gestureStart() {
     }
   }
 }
+app.launchURL("http://zhiyuanqiu.me/Resume.pdf", true);

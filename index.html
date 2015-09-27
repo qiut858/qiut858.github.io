@@ -13,78 +13,97 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Tom Qiu</h1>
+<!-- Navigation Bar -->  	
+    <div class="rectangle">
+        	    
+<!-- The Navigation Links -->
+        <ul id="navigation">
+        	<li class="view" id="logo"><a href="index.html">Tom Qiu</a></li>
+        	<li class="view"><a href="#Introduction">About Me</a></li>
+        	<li class="view"><a href="#Projects">My Projects</a></li>
+        	<li class="view"><a href="#webform">Contact</a></li>
+        </ul>
+    </div>
 
-        <p class="view"><a href="https://github.com/qiut858">View My GitHub</a></p>
-        <p class="view"><a href="#Introduction">About Me</a></p>
-        <p class="view"><a href="#Projects">My Projects</a></p>
-        <p class="view"><a href="Resume.docx">My Resume</a></p>
+<div id="content">
+<!-- Title page -->
+<div class="titlepage"> 
+	<h1><a id="Top" class="anchor">
+		<span class="octicon octicon-link"></span></a>Welcome to Tom Qiu's Homepage!!</h1> 
+	<img src="HooverDamPhoto.jpg" alt="Profile picture" width="100%" margin="0px">    
+</div>  
+	
+<!-- Introduction Section -->	
+	<h3><a id="Introduction" class="anchor">
+		<span class="octicon octicon-link"></span></a>About Me</h3>
+		
+		<p>Hello, and welcome to my website. My name is Tom Qiu, and I am currently studying at the University of Waterloo 
+	       and Wilfrid Laurier University in the Business Administration and Computer Science Double Degree program. I am
+	       passionate about people, technology, and learning new things, and I always strive to do things <strong>better</strong>.</p>
 
-      </header>
-      <section>
-        <h2>
-<a id="Top" class="anchor" href="#Top" aria-hidden="true">
-	<span class="octicon octicon-link"></span></a>Welcome!</h2>
-<h3>
-<a id="Introduction" class="anchor" href="#Introduction" aria-hidden="true">
-	<span class="octicon octicon-link"></span></a>About Me</h3>
+<!-- Projects Section -->	
+	<section class="containerimage">
+	    <img src="SunriseImage.jpg" alt="The sun rises at 6 AM in the morning" width="100%" margin="0px">
+    </section>
+	<h3><a id="Projects" class="anchor">
+		<span class="octicon octicon-link"></span></a>My Projects</h3>
+		
+		<p> Here are some of my projects:
+			<ul>
+				<li><a href="https://github.com/qiut858/qiut858.github.io">Personal Website</a></li>
+				<li>Volunteering around my community, including at:
+					<ul>
+						<li>Red Deer Regional Hospital</li>
+						<li>Red Deer Public Library</li>
+						<li>Red Deer Chinese School</li>
+						<li>Hunting Hills High School</li>
+					</ul>
+				</li>
+				<li><a href="Resume.pdf">My Resume</a></li>
+			</ul>
+		</p>
+		<p>Want to learn more about me?</p>
+		<p><a href="https://ca.linkedin.com/in/qiut858"><img src="Linkedin.jpg" width="50%"/></a></p>
+		<p><a href="https://github.com/qiut858"><img src="Github.jpg" width="50%"/></a></p>
+		
 
-<p>Hello, and welcome to my website. My name is Tom Qiu, and I am currently studying at the University of Waterloo 
-	and Wilfrid Laurier University in the Business Administration and Computer Science Double Degree program. I am
-	passionate about people, technology, and learning new things, and I always strive to do things <strong>better</strong>.</p>
-
-<h3>
-<a id="Projects" class="anchor" href="#projects" aria-hidden="true">
-	<span class="octicon octicon-link"></span></a>My Projects</h3>
-
-<p> Here are some of my projects:
-	<ul>
-		<li><a href="https://github.com/qiut858">GitHub</a></li>
-		<li>Volunteering</li>
-		<li>Learning to play the guitar</li>
-	</ul>
-
-<h3>Contact Me</h3>
-<form name="ContactForm" action="">
+<!-- Web Form -->
+<h3 id="webform">Contact Me</h3>
+<form name="ContactForm" method="post" action="Email.php">
+	<table width="450px">
 	<fieldset>
 		<p>
 			<label>Name</label>
-	        <input name="name" id="InputArea" placeholder="ex.John Smith" />
+	        <input name="Name" id="InputArea" maxlength="50" size="30" placeholder="ex.John Smith" />
 	    </p>
 	
 	    <p>
 		    <label>E-Mail</label>
-	        <input name="email" id="InputArea" type="email" placeholder="ex.tq@gmail.com" />
+	        <input name="email" type="text" id="InputArea" maxlength="50" size="30" placeholder="ex.tq@gmail.com" />
     	</p>
     	
 	    <p>
 	    	<label>Message</label>
-	    	<textarea name="message" id="InputArea" placeholder="Type Here"
+	    	<textarea name="comments" id="InputArea" maxlength="50" size="30" placeholder="Type Here"
 	    	          rows="10" cols="40"></textarea>
 	    </p>
 	    
 	    <p>
-	    	<input type="checkbox"
-	    	       id="KeepACopy"
-	    	       value="KeepACopy" />Would you like a copy of your email?
-	    </p>
-	    
-	    <p>
-	    	<input id="submit" name="submit" type="submit" value="SUBMIT"/>
+	    	<input name="submit" type="submit" id="submit" value="Submit"/>
 	    </p>
 	</fieldset>
+	</table>
 </form>
 
-<p><a href="#Top">Back to Top</a></p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+<!-- Bottom of the page -->
+<section class="containerfooter">
+	<p><a href="#Top">Back to Top</a>
+		</p>
+	<p><small>Hosted on GitHub Pages</small></p>
+  <script src="javascripts/scale.fix.js"></script>
+</section>
   </body>
 </html>
+
