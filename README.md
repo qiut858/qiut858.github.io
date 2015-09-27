@@ -1,4 +1,3 @@
-# qiut858.github.io
-My github pages home page
+This is my personal webpage.
 
-You can access this page through zhiyuanqiu.me
+You can access this page directly through zhiyuanqiu.me.
