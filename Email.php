@@ -46,7 +46,7 @@ if(isset($_POST['email'])) {
  
      
  
-    $first_name = $_POST['Name']; // required
+    $Name = $_POST['Name']; // required
  
     $email_from = $_POST['email']; // required
  
