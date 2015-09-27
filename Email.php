@@ -6,9 +6,9 @@ if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
  
-    $email_to = "tomqiu96@gmail.com";
+    $email_to = "tomqiu@gmail.com";
  
-    $email_subject = "Web Visitor";
+    $email_subject = "Hello from your Webpage";
  
      
  
@@ -34,9 +34,13 @@ if(isset($_POST['email'])) {
  
     // validation expected data exists
  
-    if(!isset($_POST['Name']) ||
+    if(!isset($_POST['first_name']) ||
+ 
+        !isset($_POST['last_name']) ||
  
         !isset($_POST['email']) ||
+ 
+        !isset($_POST['telephone']) ||
  
         !isset($_POST['comments'])) {
  
@@ -46,9 +50,13 @@ if(isset($_POST['email'])) {
  
      
  
-    $Name = $_POST['Name']; // required
+    $first_name = $_POST['first_name']; // required
+ 
+    $last_name = $_POST['last_name']; // required
  
     $email_from = $_POST['email']; // required
+ 
+    $telephone = $_POST['telephone']; // not required
  
     $comments = $_POST['comments']; // required
  
@@ -66,9 +74,15 @@ if(isset($_POST['email'])) {
  
     $string_exp = "/^[A-Za-z .'-]+$/";
  
-  if(!preg_match($string_exp,$Name)) {
+  if(!preg_match($string_exp,$first_name)) {
  
-    $error_message .= 'The Name you entered does not appear to be valid.<br />';
+    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+ 
+  }
+ 
+  if(!preg_match($string_exp,$last_name)) {
+ 
+    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
  
   }
  
@@ -98,9 +112,13 @@ if(isset($_POST['email'])) {
  
      
  
-    $email_message .= "First Name: ".clean_string($Name)."\n";
+    $email_message .= "First Name: ".clean_string($first_name)."\n";
+ 
+    $email_message .= "Last Name: ".clean_string($last_name)."\n";
  
     $email_message .= "Email: ".clean_string($email_from)."\n";
+ 
+    $email_message .= "Telephone: ".clean_string($telephone)."\n";
  
     $email_message .= "Comments: ".clean_string($comments)."\n";
  
@@ -126,7 +144,7 @@ $headers = 'From: '.$email_from."\r\n".
  
  
  
-Thank you for contacting me.
+Thank you for contacting us. We will be in touch with you very soon.
  
  
  
